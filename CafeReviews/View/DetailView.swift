@@ -31,9 +31,10 @@
 /// THE SOFTWARE.
 
 import SwiftUI
+import Translation
 
 struct DetailView: View {
-
+  @State private var showTranslation = false
   var review: Review? = nil
 
   var body: some View {
@@ -42,6 +43,7 @@ struct DetailView: View {
 
       Button("Translate") {
         // Show Traslation Overlay UI
+        showTranslation.toggle()
       }
       .buttonStyle(.bordered)
       .frame(maxWidth: .infinity)
@@ -71,6 +73,7 @@ struct DetailView: View {
     }
     .navigationTitle(review?.name ?? "")
     .scenePadding()
+    .translationPresentation(isPresented: $showTranslation, text: translatableText)
   }
 }
 
