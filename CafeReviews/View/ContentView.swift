@@ -31,9 +31,12 @@
 /// THE SOFTWARE.
 
 import SwiftUI
+import Translation
 
 struct ContentView: View {
   @Environment(ViewModel.self) private var viewModel: ViewModel
+  
+  @State private var configuration: TranslationSession.Configuration?
 
   var body: some View {
     NavigationStack {
@@ -47,6 +50,32 @@ struct ContentView: View {
         }
       }
       .navigationTitle("Cafe Reviews")
+      .toolbar {
+          ToolbarItem(placement: .automatic) {
+              Menu("Translate Menu") {
+                  NavigationLink {
+                      TranslationConfigView()
+                  } label: {
+                      Text("Translation Config")
+                  }
+                  Button("Translate Cafe Names") {
+                      translateAll()
+                  }
+              }.menuStyle(.automatic)
+          }
+      }
+      .translationTask(configuration) { session in
+        Task {
+          await viewModel.translateSequence(using: session)
+        }
+      }
+    }
+  }
+  private func translateAll() {
+    if configuration == nil {
+      configuration = .init(source: viewModel.translateFrom, target: viewModel.translateTo)
+    } else {
+      configuration?.invalidate()
     }
   }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A49391E2D2475E000A09B62 /* TranslationConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A49391D2D2475E000A09B62 /* TranslationConfigView.swift */; };
 		5A63DF5F2C441EC1001358AE /* CafeReviewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A63DF5E2C441EC1001358AE /* CafeReviewsApp.swift */; };
 		5A63DF612C441EC1001358AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A63DF602C441EC1001358AE /* ContentView.swift */; };
 		5A63DF632C441EC2001358AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A63DF622C441EC2001358AE /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A49391D2D2475E000A09B62 /* TranslationConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationConfigView.swift; sourceTree = "<group>"; };
 		5A63DF5B2C441EC1001358AE /* CafeReviews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeReviews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A63DF5E2C441EC1001358AE /* CafeReviewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeReviewsApp.swift; sourceTree = "<group>"; };
 		5A63DF602C441EC1001358AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				5A6D55FA2C72456F001A6E01 /* DetailView.swift */,
 				5A63DF812C442867001358AE /* RowView.swift */,
 				5A63DF602C441EC1001358AE /* ContentView.swift */,
+				2A49391D2D2475E000A09B62 /* TranslationConfigView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				5A6D55FB2C72456F001A6E01 /* DetailView.swift in Sources */,
 				5A63DF7B2C44240A001358AE /* ViewModel.swift in Sources */,
 				5A63DF7C2C44240A001358AE /* AvailableLanguage.swift in Sources */,
+				2A49391E2D2475E000A09B62 /* TranslationConfigView.swift in Sources */,
 				5A63DF5F2C441EC1001358AE /* CafeReviewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

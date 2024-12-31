@@ -40,6 +40,9 @@ class ViewModel {
   var cafeReviews: [Review] = []
 
   var availableLanguages: [AvailableLanguage] = []
+  
+  var translateFrom: Locale.Language?
+  var translateTo: Locale.Language?
 
   init() {
     cafeReviews = loadCafeReviews()
